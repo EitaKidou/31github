@@ -39,5 +39,7 @@ class Solution1 {
         return (open == '(' && close == ')') ||
                 (open == '[' && close == ']') ||
                 (open == '{' && close == '}');
+
+
     }
 }
