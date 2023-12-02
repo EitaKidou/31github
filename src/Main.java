@@ -1,7 +1,7 @@
 import java.util.Arrays;
+import java.util.Stack;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 class Solution {
     public String longestCommonPrefix(String[] v) {
         StringBuilder ans = new StringBuilder();
@@ -15,5 +15,29 @@ class Solution {
             ans.append(first.charAt(i));
         }
         return ans.toString();
+    }
+}
+
+class Solution1 {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char curr : s.toCharArray()) {
+            if (curr == '(' || curr == '[' || curr == '{') {
+                stack.push(curr);
+            } else if (!stack.isEmpty() && isMatchingPair(stack.peek(), curr)) {
+                stack.pop();
+            } else {
+                return false;
+            }
+        }
+
+        return stack.isEmpty();
+    }
+
+    private boolean isMatchingPair(char open, char close) {
+        return (open == '(' && close == ')') ||
+                (open == '[' && close == ']') ||
+                (open == '{' && close == '}');
     }
 }
