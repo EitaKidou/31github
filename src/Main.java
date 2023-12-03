@@ -42,4 +42,42 @@ class Solution1 {
 
 
     }
-}
+//    class Solution2 {
+//        public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+//            ListNode dummy=new ListNode(0);
+//            ListNode ans=dummy;
+//            while(list1!=null && list2!=null)
+//            {
+//                if(list1.val<=list2.val)
+//                {
+//                    ListNode temp=new ListNode(list1.val);
+//                    dummy.next=temp;
+//                    dummy=dummy.next;
+//                    list1=list1.next;
+//                }
+//                else
+//                {
+//                    ListNode temp=new ListNode(list2.val);
+//                    dummy.next=temp;
+//                    dummy=dummy.next;
+//                    list2=list2.next;
+//                }
+//            }
+//            while(list1!=null)
+//            {
+//                ListNode temp=new ListNode(list1.val);
+//                dummy.next=temp;
+//                dummy=dummy.next;
+//                list1=list1.next;
+//            }
+//            while(list2!=null)
+//            {
+//                ListNode temp=new ListNode(list2.val);
+//                dummy.next=temp;
+//                dummy=dummy.next;
+//                list2=list2.next;
+//            }
+//            return ans.next;
+//        }
+//    }}
+
